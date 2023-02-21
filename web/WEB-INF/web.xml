@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <servlet>
+        <servlet-name>DBConnection</servlet-name>
+        <servlet-class>DB.DBConnection</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Sendmail</servlet-name>
+        <servlet-class>Mail.Sendmail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DBConnection</servlet-name>
+        <url-pattern>/DBConnection</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Sendmail</servlet-name>
+        <url-pattern>/Sendmail</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param> 
+    <description>Location to store uploaded file</description> 
+    <param-name>file-upload</param-name> 
+    <param-value>
+      C:/Users/IVS PC5/Documents/phrr/
+     </param-value> 
+</context-param>
+</web-app>
